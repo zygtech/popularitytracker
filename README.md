@@ -10,7 +10,7 @@ Python written scripts to monitor popularity of chosen places every hour between
 For legal concerns please read [Issue #90](https://github.com/m-wrzr/populartimes/issues/90)
 
 Installation:
-1. Get a [Google Maps API key](Get a Google Maps API key https://developers.google.com/places/web-service/get-api-key)
+1. Get a Google Maps API key. [Get a Google Maps API key](https://developers.google.com/places/web-service/get-api-key)
 2. `clone` or unpack ZIP on server in example to home folder
 3. Browse to folder `populartimes` and install it running `pip install .`
 4. Edit both `init.py` and `stat.py` by changing API KEY, and PLACE IDs in lines with `saveid` (any amount). [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
