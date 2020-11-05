@@ -7,7 +7,7 @@ import populartimes, datetime, sys
 def saveid(placeid):
     api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
     content = populartimes.get_id(api,placeid)
-    if (len(sys.argv) == 0):
+    if (len(sys.argv) == 1):
         f = open("places/" + placeid + ".txt", "a")
         d = datetime.datetime.now()
         try:
