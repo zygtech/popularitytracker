@@ -39,7 +39,7 @@ foreach ($dir as $file)
 		<label>HOUR:</label>
 		<select name="hour">
 		<?php
-		for ($i=10;$i<=20;$i++) {
+		for ($i=$minhour;$i<=$maxhour;$i++) {
 			echo '<option value="' . $i . '"';
 			if ($i==$_GET['hour'])
 				echo ' selected';
