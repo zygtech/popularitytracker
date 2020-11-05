@@ -15,7 +15,7 @@ Installation:
 3. Browse to folder `populartimes` and install it running `pip install .`
 4. Edit both `init.py` and `stat.py` by changing API KEY, and PLACE IDs with `saveid`. [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 5. Run `python3 init.py` to initialize script and fill `names` folder with data.
-6. Add `stat.py` to CRON by running `crontab -e` and adding in example line 
+6. Add to `cron` by running `crontab -e` and adding in example line 
    `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/stat.py`
 7. Copy folder `tracker` to Apache/Nginx WWW folder in example `/var/www/html`
 8. Edit `config.php` in this folder with `popularitytracker` path.
