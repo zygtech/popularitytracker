@@ -2,7 +2,7 @@
 
 [Example Tracking Site](https://zygtech.pl/tracker/)
 
-PHP and Python written scripts to monitor popularity of chosen places every hour between 10:00-20:00. Uses:
+PHP and Python written scripts to monitor popularity of chosen places every hour between any hours. Uses:
 1. [Populartimes](https://github.com/m-wrzr/populartimes/)
 2. [SimpleXLSXGen](https://github.com/shuchkin/simplexlsxgen/)
 3. [Chart.js](https://www.chartjs.org/)
