@@ -4,4 +4,6 @@
 -->
 <?php
 	$installdir='/home/pi/popularitytracker';
+	$minhour=10;
+	$maxhour=20;
 ?>
