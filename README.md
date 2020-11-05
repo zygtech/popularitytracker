@@ -19,7 +19,7 @@ Installation:
   + `gcontext.check_hostname = False`
   + `gcontext.verify_mode = ssl.CERT_NONE`
 + Then reinstall `populartimes` script with `pip3 install .`  
-  + Modyfication disables SSL certificate verification when it's no longer valid
+  + Modification disables SSL certificate verification when it's no longer valid
 3. Edit both `init.py` and `stat.py` by changing `API KEY`, and `PLACE IDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Run `python3 init.py` to initialize script and fill `names` folder with data
