@@ -64,7 +64,7 @@ foreach ($dir as $file)
 		<div style="width: 1280px; height: 720px;"><canvas id="myChart" width="400" height="400"></canvas></div>
 <script>
 var ctx = document.getElementById('myChart');
-var myLineChart = new Chart(ctx, {
+var myBarChart = new Chart(ctx, {
     type: 'bar',
     data: {
 		labels:  <?php echo $labels; ?>,
