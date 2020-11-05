@@ -5,7 +5,7 @@
 import populartimes, datetime, sys
 
 def saveid(placeid):
-    api = "AIzaSyD7GRMFL-Z5-T0JZckIxs4t9yX5GG2LcAM"
+    api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
     content = populartimes.get_id(api,placeid)
     if (sys.argv[1]=="init"):
         f = open("names/" + placeid + ".txt", "w")
