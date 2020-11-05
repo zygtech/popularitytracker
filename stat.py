@@ -14,7 +14,7 @@ def saveid(placeid):
         f = open("places/" + placeid + ".txt", "a")
         d = datetime.datetime.now()
         try:
-            f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_pop$
+            f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_popularity"]))
         except:
             f.write(d.strftime("%Y-%m-%d %H") + ": N\n")
     f.close()
