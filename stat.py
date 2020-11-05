@@ -5,14 +5,18 @@
 import populartimes, datetime
 
 def saveid(placeid):
-    api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
+    api = "AIzaSyD7GRMFL-Z5-T0JZckIxs4t9yX5GG2LcAM"
     content = populartimes.get_id(api,placeid)
-    f = open("places/" + placeid + ".txt", "a")
-    d = datetime.datetime.now()
-    try:
-        f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_popularity"]) + "\n")
-    except:
-        f.write(d.strftime("%Y-%m-%d %H") + ": N\n")
+    if (sys.argv[1]=="init"):
+        f = open("names/" + placeid + ".txt", "w")
+        f.write(content["name"] + ' ' + content["address"])
+    else:
+        f = open("places/" + placeid + ".txt", "a")
+        d = datetime.datetime.now()
+        try:
+            f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_pop$
+        except:
+            f.write(d.strftime("%Y-%m-%d %H") + ": N\n")
     f.close()
 
 def main():
