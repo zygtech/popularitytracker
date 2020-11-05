@@ -13,13 +13,13 @@ Installation:
 + [Get a Google Maps API key](https://developers.google.com/places/web-service/get-api-key)
 1. `Clone` or `unpack ZIP` on server in example to `home` folder
 2. Browse to folder `populartimes` and install it running `pip3 install .`
-+ If you encounter `URLLIB` error edit `crawler.py` by changing line:
++ if you encounter `URLLIB` error edit `crawler.py` by changing line:
 + `gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)` with three lines:
   + `gcontext = ssl.create_default_context()`
   + `gcontext.check_hostname = False`
   + `gcontext.verify_mode = ssl.CERT_NONE`
-+ Then reinstall `populartimes` script with `pip3 install .`  
-  + Modification disables SSL certificate verification when it's no longer valid
++ then reinstall `populartimes` script with `pip3 install .`  
+  + modification disables SSL certificate verification when it's no longer valid
 3. Edit `stat.py` by changing `API KEY`, and `PLACE IDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Change permissions to `stat.py` by running `chmod 777 stat.py`
