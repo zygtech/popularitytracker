@@ -26,7 +26,7 @@ Installation:
 5. Run `python3 tracker.py init` to initialize script
 6. Add to `CRON` by running `crontab -e` and adding in example (Monday - Saturday from 10:00-20:00) line:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/tracker.py`
-7. Copy folder `tracker` to `Apache/Nginx` public folder
+7. Copy folder `tracker` to `Apache/Nginx` public web folder
 8. Edit `config.php` in this folder with `popularitytracker` path and min/max hour (same as in `CRON`)
 9. Browse to `https://yourserver.com/tracker` and monitor popularity of any places
 
