@@ -2,7 +2,7 @@
 """Author: Krzysztof Hrybacz <krzysztof@zygtech.pl>"""
 """License: GNU General Public License -- version 3"""
 
-import populartimes, datetime
+import populartimes, datetime, sys
 
 def saveid(placeid):
     api = "AIzaSyD7GRMFL-Z5-T0JZckIxs4t9yX5GG2LcAM"
