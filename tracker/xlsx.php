@@ -6,23 +6,28 @@
 	require_once('config.php');
 	require_once('SimpleXLSXGen.php');
 	if ($_GET['id']!='') {
-		$excel=[['Date','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00']];
+		$excel=array();
+		$row=array();
+		$row[]='Date';
+		for ($i=$minhour;$i<=$maxhour;$i++)
+			$row[]=$i . ':00';
+		$excel[]=$row;
 		$lines=file($installdir . '/places/' . $_GET['id'] . '.txt');
 		$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 		$row=array();
-		for ($i=0;$i<$l-10;$i++)
-				$row[]=0;
+		for ($i=0;$i<$l-$minhour;$i++)
+			$row[]=0;
 		foreach ($lines as $line) {
 			$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
 			$l++;
-			if ($l==21) {
+			if ($l==$maxhour+1) {
 				array_unshift($row,explode(' ',$line)[0]);
 				$excel[]=$row;
-				$l=10;
+				$l=$minhour;
 				$row=array();
 			}
 		}
-		if ($l>0) {
+		if ($l>$minhour) {
 				array_unshift($row,explode(' ',$line)[0]);
 				$excel[]=$row;
 		}
@@ -35,23 +40,29 @@
 				$names[explode('.',$file)[0]]=trim(file($installdir . '/names/' . $file)[0]);
 		$excel=array();
 		foreach ($names as $key=>$name) {
-			$excel[]=['Data','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00',$name];
+			$excel=array();
+			$row=array();
+			$row[]='Date';
+			for ($i=$minhour;$i<=$maxhour;$i++)
+				$row[]=$i . ':00';
+			$row[]=$name;
+			$excel[]=$row;
 			$lines=file($installdir . '/places/' . $key . '.txt');
 			$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 			$row=array();
-			for ($i=0;$i<$l-10;$i++)
+			for ($i=0;$i<$l-$minhour;$i++)
 				$row[]=0;
 			foreach ($lines as $line) {
 				$row[]=intval(substr(explode(' ',$line)[2],0,strlen(explode(' ',$line)[2])-1));
 				$l++;
-				if ($l==21) {
+				if ($l==$maxhour+1) {
 					array_unshift($row,explode(' ',$line)[0]);
 					$excel[]=$row;
-					$l=10;
+					$l=$minhour;
 					$row=array();
 				}
 			}
-			if ($l>10) {
+			if ($l>$minhour) {
 				array_unshift($row,explode(' ',$line)[0]);
 				$excel[]=$row;
 			}
