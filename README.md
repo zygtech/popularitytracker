@@ -20,5 +20,5 @@ Installation:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/stat.py`
 6. Copy folder `tracker` to Apache/Nginx WWW folder in example `/var/www/html`
 7. Edit `config.php` in this folder with `popularitytracker` path
-8. Browse to `https://yourserver.com/tracker` and monitor any places on the world
+8. Browse to `https://yourserver.com/tracker` and monitor popularity of any places
 
