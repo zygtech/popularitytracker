@@ -20,7 +20,7 @@ Installation:
   + `gcontext.verify_mode = ssl.CERT_NONE`
 + Then reinstall `populartimes` script with `pip3 install .`  
   + modification disables `SSL certificate` verification when it's no longer valid
-3. Edit `tracker.py` by changing `API KEY`, and `PlaceIDs` in lines with function `saveid()`
+3. Edit `tracker.py` by changing `API key`, and `PlaceIDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Change permissions to `tracker.py` by running `chmod 777 tracker.py`
 5. Run `python3 tracker.py init` to initialize script
