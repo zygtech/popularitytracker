@@ -14,11 +14,12 @@ def saveid(placeid):
             f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_popularity"]) + "\n")
         except:
             f.write(d.strftime("%Y-%m-%d %H") + ": N\n")
+        f.close()
     else:
         if (sys.argv[1]=="init"):
             f = open("names/" + placeid + ".txt", "w")
             f.write(content["name"] + ' ' + content["address"])
-    f.close()
+            f.close()
 
 def main():
     saveid("AAAAAAAAAAAAAAAAAAAAAAAAAAA")
