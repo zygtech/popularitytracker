@@ -23,7 +23,7 @@ Installation:
 3. Edit `stat.py` by changing `API KEY`, and `PLACE IDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Change permissions to `stat.py` by running `chmod 777 stat.py`
-5. Run `python3 stat.py init` to initialize script and fill `names` folder with data
+5. Run `python3 stat.py init` to initialize script
 6. Add to `cron` by running `crontab -e` and adding in example (Monday - Saturday) line:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/stat.py`
 7. Copy folder `tracker` to Apache/Nginx WWW folder in example `/var/www/html`
