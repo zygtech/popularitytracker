@@ -12,7 +12,7 @@ For legal concerns please read [Issue #90](https://github.com/m-wrzr/populartime
 Installation:
 + [Get a Google Maps API key](https://developers.google.com/places/web-service/get-api-key)
 1. `clone` or unpack ZIP on server in example to home folder
-2. Browse to folder `populartimes` and install it running `pip install .`
+2. Browse to folder `populartimes` and install it running `pip3 install .`
 3. Edit both `init.py` and `stat.py` by changing `API KEY`, and `PLACE IDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Run `python3 init.py` to initialize script and fill `names` folder with data
