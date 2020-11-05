@@ -11,7 +11,7 @@ For legal concerns please read [Issue #90](https://github.com/m-wrzr/populartime
 
 Installation:
 + [Get a Google Maps API key](https://developers.google.com/places/web-service/get-api-key)
-1. `clone` or unpack ZIP on server in example to home folder
+1. `clone` or `unpack ZIP` on server in example to home folder
 2. Browse to folder `populartimes` and install it running `pip3 install .`
 + If you encounter `URLLIB` error edit `crawler.py` by changing line:
 + `gcontext = ssl.SSLContext(ssl.PROTOCOL_TLSv1)` with three lines:
