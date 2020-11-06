@@ -20,12 +20,12 @@ Installation:
   + `gcontext.verify_mode = ssl.CERT_NONE`
 + Then reinstall `populartimes` script with `pip3 install .`  
   + modification disables `SSL certificate` verification if it's no longer valid
-3. Edit `tracker.py` by changing `PATH`, `API key`, and `PlaceIDs` in lines with function `saveid()`
+3. Edit `tracker.py` by changing `API key`, and `PlaceIDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
 4. Run `python3 tracker.py init` to initialize script
 5. Add to `CRON` by running `crontab -e` and adding in example `(Monday - Saturday from 10:00-20:00)` line:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/tracker.py`
 6. Copy folder `tracker` to `Apache/Nginx` public web folder
-7. Edit `config.php` in this folder with `popularitytracker` `PATH` and min/max hour (same as in `CRON`)
+7. Edit `config.php` in this folder with `popularitytracker` PATH and min/max hour (same as in `CRON`)
 8. Browse to `tracker URL` and monitor popularity of any places
 
