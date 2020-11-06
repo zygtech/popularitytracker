@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Author: Krzysztof Hrybacz <krzysztof@zygtech.pl>"""
 """License: GNU General Public License -- version 3"""
 
