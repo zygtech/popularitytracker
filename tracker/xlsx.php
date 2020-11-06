@@ -11,7 +11,6 @@
 		$row[]='Date';
 		for ($i=$minhour;$i<=$maxhour;$i++)
 			$row[]=$i . ':00';
-		$excel[]=$row;
 		$lines=file($installdir . '/places/' . $_GET['id'] . '.txt');
 		$l=intval(substr(explode(' ',$lines[0])[1],0,2));
 		$row=array();
@@ -22,6 +21,7 @@
 			$l++;
 			if ($l==$maxhour+1) {
 				array_unshift($row,explode(' ',$line)[0]);
+				array_unshift($row,$name);
 				$excel[]=$row;
 				$l=$minhour;
 				$row=array();
@@ -29,6 +29,7 @@
 		}
 		if ($l>$minhour) {
 				array_unshift($row,explode(' ',$line)[0]);
+				array_unshift($row,$name);
 				$excel[]=$row;
 		}
 		$xlsx = SimpleXLSXGen::fromArray( $excel );
