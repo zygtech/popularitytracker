@@ -3,6 +3,7 @@
 """License: GNU General Public License -- version 3"""
 
 import populartimes, datetime, sys, os
+from pathlib import Path
 
 def saveid(placeid):
     api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
@@ -18,8 +19,10 @@ def saveid(placeid):
         f.close()
     else:
         if (sys.argv[1]=="init"):
-            os.mkdir(path + "/names") 
-            os.mkdir(path + "/places")
+            if not(Path(path + "/names").is_dir()):
+                os.mkdir(path + "/names") 
+            if not(Path(path + "/places").is_dir()):
+                os.mkdir(path + "/places")
             f = open(path + "/names/" + placeid + ".txt", "w")
             f.write(content["name"] + ' ' + content["address"])
             f.close()
