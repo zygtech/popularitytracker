@@ -5,10 +5,11 @@
 import populartimes, datetime, sys, os
 
 def saveid(placeid):
+    path = "/home/pi/popularitytracker"
     api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
     content = populartimes.get_id(api,placeid)
     if (len(sys.argv) == 1):
-        f = open("places/" + placeid + ".txt", "a")
+        f = open(path + "/places/" + placeid + ".txt", "a")
         d = datetime.datetime.now()
         try:
             f.write(d.strftime("%Y-%m-%d %H") + ": " + str(content["current_popularity"]) + "\n")
@@ -17,9 +18,9 @@ def saveid(placeid):
         f.close()
     else:
         if (sys.argv[1]=="init"):
-            os.mkdir("names") 
-            os.mkdir("places")
-            f = open("names/" + placeid + ".txt", "w")
+            os.mkdir(path + "/names") 
+            os.mkdir(path + "/places")
+            f = open(path + "/names/" + placeid + ".txt", "w")
             f.write(content["name"] + ' ' + content["address"])
             f.close()
 
