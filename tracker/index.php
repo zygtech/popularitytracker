@@ -61,7 +61,7 @@ foreach ($dir as $file)
 		$labels = json_encode($label);
 		?>
 		<a href="xlsx.php?id=<?php echo $_GET['id']; ?>">EXPORT ALL HOURS TO EXCEL</a>
-		<div style="width: 1280px; height: 720px;"><canvas id="myChart" width="400" height="400"></canvas></div>
+		<div style="width: 1280px; height: 720px;"><canvas id="myChart" width="1280" height="720"></canvas></div>
 <script>
 var ctx = document.getElementById('myChart');
 var myBarChart = new Chart(ctx, {
