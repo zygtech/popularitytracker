@@ -5,7 +5,7 @@
 PHP and Python written scripts to monitor popularity of chosen places every hour between any range of hours. Uses:
 1. [Populartimes](https://github.com/m-wrzr/populartimes/)
 2. [SimpleXLSXGen](https://github.com/shuchkin/simplexlsxgen/)
-3. [Chart.js](https://www.chartjs.org/)
+3. [Chart.js](https://github.com/chartjs/Chart.js)
 
 For legal concerns please read [Issue #90](https://github.com/m-wrzr/populartimes/issues/90)
 
