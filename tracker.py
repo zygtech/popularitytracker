@@ -5,8 +5,8 @@
 import populartimes, datetime, sys, os
 
 def saveid(placeid):
-    path = "/home/pi/popularitytracker"
     api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
+    path = os.path.dirname(os.path.abspath(__file__))
     content = populartimes.get_id(api,placeid)
     if (len(sys.argv) == 1):
         f = open(path + "/places/" + placeid + ".txt", "a")
