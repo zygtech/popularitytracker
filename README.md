@@ -27,5 +27,5 @@ Installation:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/tracker.py`
 6. Copy folder `tracker` to `Apache/Nginx` public web folder
 7. Edit `config.php` in this folder with `popularitytracker` PATH and min/max hour (same as in `CRON`)
-8. Browse to `tracker URL` and monitor popularity of any places
+8. Open `tracker URL` in browser and monitor popularity of any places
 
