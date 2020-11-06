@@ -22,11 +22,13 @@ Installation:
   + modification disables `SSL certificate` verification if it's no longer valid
 3. Edit `tracker.py` by changing `API key`, and `PlaceIDs` in lines with function `saveid()`
 + [Find PlaceIDs](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
-4. Change permissions to `tracker.py` by running `chmod 777 tracker.py`
-5. Run `python3 tracker.py init` to initialize script
-6. Add to `CRON` by running `crontab -e` and adding in example `(Monday - Saturday from 10:00-20:00)` line:
+4. Create directiories `names` and `places` by running `mkdir names` and `mkdir places`
+5. Change permissions to `names` and `places` by running `chmod 777 names` and `chmod 777 places`
+6. Change permissions to `tracker.py` by running `chmod 777 tracker.py`
+7. Run `python3 tracker.py init` to initialize script
+8. Add to `CRON` by running `crontab -e` and adding in example `(Monday - Saturday from 10:00-20:00)` line:
 + `0 10-20 * * 1-6 python3 /home/pi/popularitytracker/tracker.py`
-7. Copy folder `tracker` to `Apache/Nginx` public web folder
-8. Edit `config.php` in this folder with `popularitytracker` path and min/max hour (same as in `CRON`)
-9. Browse to `tracker URL` and monitor popularity of any places
+9. Copy folder `tracker` to `Apache/Nginx` public web folder
+10. Edit `config.php` in this folder with `popularitytracker` path and min/max hour (same as in `CRON`)
+11. Browse to `tracker URL` and monitor popularity of any places
 
