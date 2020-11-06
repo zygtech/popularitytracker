@@ -2,7 +2,7 @@
 """Author: Krzysztof Hrybacz <krzysztof@zygtech.pl>"""
 """License: GNU General Public License -- version 3"""
 
-import populartimes, datetime, sys
+import populartimes, datetime, sys, os
 
 def saveid(placeid):
     api = "NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
@@ -17,6 +17,8 @@ def saveid(placeid):
         f.close()
     else:
         if (sys.argv[1]=="init"):
+            os.mkdir("names") 
+            os.mkdir("places")
             f = open("names/" + placeid + ".txt", "w")
             f.write(content["name"] + ' ' + content["address"])
             f.close()
