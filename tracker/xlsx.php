@@ -41,12 +41,11 @@
 				$names[explode('.',$file)[0]]=trim(file($installdir . '/names/' . $file)[0]);
 		$excel=array();
 		foreach ($names as $key=>$name) {
-			$excel=array();
 			$row=array();
+			$row[]='Localization';
 			$row[]='Date';
 			for ($i=$minhour;$i<=$maxhour;$i++)
 				$row[]=$i . ':00';
-			$row[]=$name;
 			$excel[]=$row;
 			$lines=file($installdir . '/places/' . $key . '.txt');
 			$l=intval(substr(explode(' ',$lines[0])[1],0,2));
@@ -58,6 +57,7 @@
 				$l++;
 				if ($l==$maxhour+1) {
 					array_unshift($row,explode(' ',$line)[0]);
+					array_unshift($row,$name);
 					$excel[]=$row;
 					$l=$minhour;
 					$row=array();
@@ -65,6 +65,7 @@
 			}
 			if ($l>$minhour) {
 				array_unshift($row,explode(' ',$line)[0]);
+				array_unshift($row,$name);
 				$excel[]=$row;
 			}
 		}
