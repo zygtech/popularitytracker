@@ -1,4 +1,5 @@
 # popularitytracker
+### REDUNDANT: Check [Query Popularity Tracker](https://github.com/projecthbk/qtracker/) instead.
 
 [Example Tracking Site](https://zygtech.pl/tracker/)
 
