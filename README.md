@@ -1,8 +1,6 @@
 # popularitytracker
 ### REDUNDANT: Check [Query Popularity Tracker](https://github.com/projecthbk/qtracker/) instead
 
-[Example Tracking Site](https://zygtech.pl/tracker/)
-
 PHP and Python written scripts to monitor popularity of chosen places every hour between any range of hours. Uses:
 1. [Populartimes](https://github.com/m-wrzr/populartimes/)
 2. [SimpleXLSXGen](https://github.com/shuchkin/simplexlsxgen/)
